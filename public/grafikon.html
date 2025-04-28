@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafikon</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/grafikon.css">
+</head>
+<body>
+    <header>
+        <h1>Kružni grafikon za tip prognoze</h1>
+    </header>
+
+    <nav class="nav-menu" aria-labelledby="nav-menu">
+        <ul class="nav-menu-items">
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Navigacija</a>
+              <div class="dropdown-content">
+                <a href="./index.html">Početna</a>
+                <a href="#">Grafikon</a>
+                <a href="/slike">Galerija</a>
+              </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="chart-container">
+        <div class="pie-chart-container">
+            <div class="pie-chart">
+                <div class="slice slice-sunny">55%</div>
+                <div class="slice slice-rainy">25%</div>
+                <div class="slice slice-cloudy">20%</div>
+            </div>
+            <div class="legend">
+                <div class="legend-item"><span class="sunny"></span> Sunčano</div>
+                <div class="legend-item"><span class="rainy"></span> Kišovito</div>
+                <div class="legend-item"><span class="cloudy"></span> Oblačno</div>
+            </div>
+        </div>
+
+        <div class="histogram-container">
+            <div class="bar-container">
+                <div class="label">Sunčano</div>
+                <div class="bar sunny" style="width: 55%;">55%</div>
+            </div>
+            <div class="bar-container">
+                <div class="label">Kišovito</div>
+                <div class="bar rainy" style="width: 25%;">25%</div>
+            </div>
+            <div class="bar-container">
+                <div class="label">Oblačno</div>
+                <div class="bar cloudy" style="width: 20%;">20%</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
