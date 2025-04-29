@@ -32,6 +32,46 @@
 
 		<h1>Vremenski Podaci</h1>
 
+
+		<div id="modal-aktivnosti" class="modal">
+			<div class="modal-sadrzaj">
+			  <span class="zatvori">&times;</span>
+			  <h2>Plan aktivnosti</h2>
+			  <table id="tablica-aktivnosti">
+				<thead>
+				  <tr>
+					<th>Datum (ID)</th>
+					<th>Temperatura</th>
+					<th>Lokacija</th>
+					<th>Vrijeme</th>
+					<th>...</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  
+				</tbody>
+			  </table>
+			</div>
+		  </div>
+
+		<aside id="aktivnosti">
+			<h2>Plan aktivnosti</h2>
+			<!-- <table id="tablica-aktivnosti">
+				<thead>
+				  <tr>
+					<th>Datum (ID)</th>
+					<th>Temperatura</th>
+					<th>Lokacija</th>
+					<th>Vrijeme</th>
+				  </tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			  </table>  -->
+			<button id="pregled-plana">Pregled plana</button>
+		</aside> 
+
 		<!--Elementi za filtriranje podataka-->
 		
 		<div id="filteri">
@@ -52,8 +92,13 @@
 			</select>
 		  
 			<label for="filter-temperature">Temperatura (°C):</label>
-			<input type="range" id="filter-temperature" min="-15" max="45" step="1" value="23">
-			<span id="temperature-value">23.0°C</span>
+			<div class="sliders">
+				<input type="range" id="filter-temperature-min" min="-15" max="45" step="1" value="23">
+				<input type="range" id="filter-temperature-max" min="-15" max="45" step="1" value="23">
+
+			</div>
+			<span id="temperature-value-min">23°C</span>
+			<span id="temperature-value-max">23°C</span>
 		  
 			<button id="primijeni-filtere">Filtriraj</button>
 		  </div>

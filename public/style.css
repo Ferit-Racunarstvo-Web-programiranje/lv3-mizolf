@@ -252,7 +252,6 @@ picture img:hover {
   cursor: pointer;
 }
 
-
 /*CSS za filtriranje podataka*/
 #filteri {
   display: flex;
@@ -262,8 +261,8 @@ picture img:hover {
   margin-bottom: 20px;
   margin-inline: 8px;
 }
-#filteri select, 
-#filteri input[type="range"], 
+#filteri select,
+#filteri input[type="range"],
 #filteri button {
   padding: 5px;
   font-size: 14px;
@@ -276,9 +275,14 @@ picture img:hover {
   text-align: center;
 }
 
-#primijeni-filtere{
+#primijeni-filtere {
   padding: 20px;
   width: auto;
+}
+
+.sliders {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 769px) and (max-width: 1440px) {
@@ -311,4 +315,80 @@ picture img:hover {
     margin-left: 0;
     margin-top: 20px;
   }
+}
+
+#aktivnosti {
+  position: fixed;
+  right: 100px;
+  top: 100px;
+
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+#tablica-aktivnosti {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#tablica-aktivnosti th,
+#tablica-aktivnosti td {
+  border: 1px solid black;
+  padding: 4px;
+  text-align: center;
+}
+
+#aktivnosti button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Modal - tamna pozadina */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Sadržaj modala */
+.modal-sadrzaj {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Gumb za zatvaranje */
+.zatvori {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.zatvori:hover {
+  color: #000;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
 }
