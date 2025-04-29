@@ -95,13 +95,28 @@ fetch('weather.csv')
 
 let aktivnosti = [];
 
+document.addEventListener("DOMContentLoaded", () => {
+    const spremljeno = localStorage.getItem("planAktivnosti");
+    if (spremljeno) {
+        aktivnosti = JSON.parse(spremljeno);
+        osvjeziAktivnosti();
+    }
+});
+
 function dodajUPlanAktivnosti(weather){
     if (!aktivnosti.includes(weather)){
         aktivnosti.push(weather);
+        localStorage.setItem("planAktivnosti", JSON.stringify(aktivnosti));
         osvjeziAktivnosti();
     } else {
         alert("Dan je u planu aktivnosti!");
     }
+}
+
+function ukloniIzPlanAktivnosti(index){
+    aktivnosti.splice(index,1);
+    localStorage.setItem("planAktivnosti", JSON.stringify(aktivnosti));
+    osvjeziAktivnosti();
 }
 
 function osvjeziAktivnosti(){
@@ -128,12 +143,6 @@ function osvjeziAktivnosti(){
         tbody.appendChild(row);
     })
 }
-
-function ukloniIzPlanAktivnosti(index){
-    aktivnosti.splice(index,1);
-    osvjeziAktivnosti();
-}
-
 
 document.getElementById('pregled-plana').addEventListener('click',() =>{
     if (aktivnosti.length===0){
