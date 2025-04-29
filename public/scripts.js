@@ -144,29 +144,31 @@ function osvjeziAktivnosti(){
     })
 }
 
-document.getElementById('pregled-plana').addEventListener('click',() =>{
+// document.getElementById('pregled-plana').addEventListener('click',() =>{
+//     if (aktivnosti.length===0){
+//         alert("Nema aktivnosti!");
+//     } else {
+//         osvjeziAktivnosti();
+//     }
+// });
+
+// JS za modal
+const modal = document.getElementById("modal-aktivnosti");
+const span = document.querySelector(".zatvori");
+
+document.getElementById("pregled-plana").addEventListener('click', ()=>{
     if (aktivnosti.length===0){
         alert("Nema aktivnosti!");
     } else {
+        modal.style.display = "block";
         osvjeziAktivnosti();
     }
 });
 
-// JS za modal
-const modal = document.getElementById("modal-aktivnosti");
-const btn = document.getElementById("pregled-plana");
-const span = document.querySelector(".zatvori");
-
-btn.onclick = function () {
-  modal.style.display = "block";
-  osvjeziAktivnosti();
-};
-
-span.onclick = function () {
-  modal.style.display = "none";
-  alert(`Uspjesno ste odabrali ${aktivnosti.length} dan/a za aktivnosti!`);
-
-};
+document.querySelector(".zatvori").addEventListener('click', () => {
+    modal.style.display = "none";
+    alert(`Uspjesno ste odabrali ${aktivnosti.length} dan/a za aktivnosti!`);
+});
 
 window.onclick = function (event) {
   if (event.target === modal) {
