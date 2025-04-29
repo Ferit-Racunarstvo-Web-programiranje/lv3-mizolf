@@ -4,6 +4,6 @@
 
 Mislav Češnik
 
-LINK: [Web Page](lv3-mizolf-production.up.railway.app)
+LINK: [Web page](https://lv3-mizolf-production.up.railway.app/)
 
 Web aplikacija koja omogućuje korisnicima pregled vremenskih prognoza te planiranje dnevnih aktivnosti na temelju vremenskih uvjeta. Korisnik može filtrirati prognoze prema temperaturi, vrsti vremena i sezoni, zatim odabrati željeni dan i spremiti ga u svoj plan aktivnosti, koji je pregledno prikazan u popup tablici.
